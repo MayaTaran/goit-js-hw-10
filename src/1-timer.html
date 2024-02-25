@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer</title>
+    <link rel="stylesheet" href="./css/1-timer.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    />
+  </head>
+  <body>
+    <div>
+      <a href="./index.html">Back</a>
+    </div>
+    <div class="timer-container">
+      <input class="timer-input" type="text" id="datetime-picker" />
+      <button class="timer-button" type="button" data-start>Start</button>
+
+      <div class="timer">
+        <div class="field">
+          <span class="value" id="days" data-days>00</span>
+          <span class="label">Days</span>
+        </div>
+        <div class="field">
+          <span class="value" id="hours" data-hours>00</span>
+          <span class="label">Hours</span>
+        </div>
+        <div class="field">
+          <span class="value" id="minutes" data-minutes>00</span>
+          <span class="label">Minutes</span>
+        </div>
+        <div class="field">
+          <span class="value" id="seconds" data-seconds>00</span>
+          <span class="label">Seconds</span>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./js/1-timer.js"></script>
+  </body>
+</html>

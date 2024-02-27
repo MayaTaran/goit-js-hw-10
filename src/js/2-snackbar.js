@@ -6,7 +6,7 @@ import "izitoast/dist/css/iziToast.min.css";
 const getButton = document.querySelector("button");
 const getDelay = document.querySelector('input');
 const getFieldset = document.querySelector("fieldset");
-const getForm = document.querySelector("form");
+const getForm = document.querySelector(".form");
 
 let delayValue = 0;
 let fielsetValue = "";
@@ -32,7 +32,7 @@ function createPromise() {
     });
 }
 
-getForm.addEventListener("submit", function () {
+getForm.addEventListener("submit", function (event) {
     event.preventDefault();
       if (promiseProgress) {
        

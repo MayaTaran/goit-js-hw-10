@@ -6,7 +6,7 @@ import "izitoast/dist/css/iziToast.min.css";
 const getButton = document.querySelector("button");
 const getDelay = document.querySelector('input');
 const getFieldset = document.querySelector("fieldset");
-const getform = document.querySelector("form")
+const getForm = document.querySelector("form");
 
 let delayValue = 0;
 let fielsetValue = "";

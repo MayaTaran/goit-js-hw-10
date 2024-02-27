@@ -33,7 +33,7 @@ function createPromise() {
     });
 }
 
-getForm.addEventListener("submit", (event) {
+getForm.addEventListener("submit", function (event) {
     event.preventDefault();
       if (promiseProgress) {
        

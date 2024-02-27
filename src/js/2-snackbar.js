@@ -8,6 +8,7 @@ const getDelay = document.querySelector('input');
 const getFieldset = document.querySelector("fieldset");
 const getForm = document.querySelector(".form");
 
+
 let delayValue = 0;
 let fielsetValue = "";
 let promiseProgress = false;
@@ -38,7 +39,8 @@ getForm.addEventListener("submit", function (event) {
        
         return;
     }
-    promiseProgress = true
+    promiseProgress = true;
+    getDelay.disabled = true; 
     createPromise()
         .then(function () {
             iziToast.show({
@@ -60,5 +62,6 @@ getForm.addEventListener("submit", function (event) {
         })
         .finally(() => {
             promiseProgress = false;
+            getDelay.disabled = false; 
         });
 });

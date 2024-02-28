@@ -35,7 +35,8 @@ getForm.addEventListener("submit", function (event) {
     promiseProgress = true;
     getDelay.disabled = true; 
      delayValue = getDelay.value;
-    fielsetValue = getFieldset.querySelector('input:checked').value;
+   fielsetValue = getFieldset.querySelector('input[name="state"]:checked')?.value;
+
     
     
     createPromise()

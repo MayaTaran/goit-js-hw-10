@@ -13,13 +13,13 @@ let delayValue = 0;
 let fielsetValue = "";
 let promiseProgress = false;
 
-getDelay.addEventListener("input", function (event) {
-    delayValue = event.currentTarget.value;
-});
+// getDelay.addEventListener("input", function (event) {
+//     delayValue = event.currentTarget.value;
+// });
 
-getFieldset.addEventListener("input", function (event) {
-    fielsetValue = event.target.value;
-});
+// getFieldset.addEventListener("input", function (event) {
+//     fielsetValue = event.target.value;
+// });
 
 function createPromise() {
     return new Promise(function (res, rej) {
@@ -39,8 +39,13 @@ getForm.addEventListener("submit", function (event) {
        
         return;
     }
+   
     promiseProgress = true;
     getDelay.disabled = true; 
+     delayValue = getDelay.value;
+    fielsetValue = getFieldset.querySelector('input:checked').value;
+    
+    
     createPromise()
         .then(function () {
             iziToast.show({
